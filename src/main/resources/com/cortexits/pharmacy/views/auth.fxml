@@ -33,9 +33,9 @@
                <children>
                   <Label text="Username" />
 <!--                  <TextField styleClass="form-error" />-->
-                  <TextField />
+                  <TextField fx:id="userName" />
                   <Label text="Password" />
-                  <PasswordField styleClass="form-error" />
+                  <PasswordField fx:id="userPass" styleClass="form-error" />
                   <AnchorPane>
                      <children>
                         <Button cancelButton="true" mnemonicParsing="false" onAction="#onCancelAction" styleClass="cancel" text="Close" />
