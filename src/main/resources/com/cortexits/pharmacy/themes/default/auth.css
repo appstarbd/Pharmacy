@@ -1,0 +1,80 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 19, 2022, 6:31:26 AM
+    Author     : imran
+*/
+
+root { 
+    display: block;
+}
+/*.root {
+-fx-background-image: url("background.jpg");
+}*/
+
+.left-side {
+    /*-fx-background-color: #00b429;*/
+    /*-fx-background-color: linear-gradient(#33d6ff, #209bc0);*/
+    -fx-background-color: linear-gradient(to bottom right, #00ce86, #00b429)
+}
+
+
+.right-side {
+    /*-fx-background-color: #6780E2;*/
+
+}
+
+/*.welcome {}*/
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#welcome-text {
+   -fx-font-size: 32px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #818181;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+#actiontarget {
+  -fx-fill: FIREBRICK;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );  
+}
+
+.text-field {
+    -fx-pref-height: 33px;
+}
+
+.button {
+    /*-fx-text-fill: white;*/
+    /*-fx-font-family: "Arial Narrow";*/
+    -fx-font-weight: bold;
+    /*-fx-background-color: linear-gradient(#61a2b1, #2A5058);*/
+    /*-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-pref-height: 33px;
+    -fx-cursor: "hand";
+}
+
+.button.login {
+    -fx-text-fill: #fff;
+    -fx-background-color: #00af67;
+}
+
+.button.cancel {
+    -fx-text-fill: #fff;
+    -fx-background-color: #ff6666;
+}
+
+.text-field {
+    -fx-pref-height: 40px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}

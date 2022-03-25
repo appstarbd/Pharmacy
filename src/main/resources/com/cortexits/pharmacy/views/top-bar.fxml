@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<HBox id="bottom" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.controllers.TopBarController">
+<children>
+    <Pane prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #00af67;">
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+        <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../images/yellow-pill.png" />
+                </image>
+            </ImageView>
+        </children>
+    </Pane>
+    <HBox alignment="CENTER_RIGHT" styleClass="top-bar-right" HBox.hgrow="ALWAYS">
+        <children>
+            <StackPane>
+                <HBox.margin>
+                    <Insets left="20.0" />
+                </HBox.margin>
+                <children>
+                    <TextField prefHeight="33.0" promptText="Search anything ...">
+                        <styleClass>
+                            <String fx:value="search-field" />
+                            <String fx:value="rounded" />
+                            <String fx:value="border-gray" />
+                        </styleClass>
+                        <padding>
+                            <Insets left="30.0" />
+                        </padding>
+                    </TextField>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
+                        <image>
+                            <Image url="@../icons/magnify.png" />
+                        </image>
+                        <StackPane.margin>
+                            <Insets left="10.0" />
+                        </StackPane.margin>
+                    </ImageView>
+                </children>
+            </StackPane>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0" HBox.hgrow="ALWAYS">
+                <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                          <Button fx:id="notificationButton" mnemonicParsing="false">
+                              <graphic>
+                              <StackPane>
+                                 <children>
+                                    <Label text="0">
+                                       <StackPane.margin>
+                                          <Insets bottom="20.0" left="20.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/bell-outline.png" />
+                                            </image>
+                                        </ImageView>
+                                 </children>
+                              </StackPane>
+                              </graphic>
+                              <styleClass>
+                                  <String fx:value="top-bar-buttons" />
+                                  <String fx:value="bg-white" />
+                              <String fx:value="no-border" />
+                              </styleClass>
+                          </Button>
+                          <Button mnemonicParsing="false">
+                              <graphic>
+                              <StackPane>
+                                 <children>
+                                    <Label text="0">
+                                       <StackPane.margin>
+                                          <Insets bottom="20.0" left="20.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/receipt-outline.png" />
+                                            </image>
+                                        </ImageView>
+                                 </children>
+                              </StackPane>
+                              </graphic>
+                              <styleClass>
+                                  <String fx:value="top-bar-buttons" />
+                                  <String fx:value="bg-white" />
+                              <String fx:value="no-border" />
+                              </styleClass>
+                          </Button>
+                          <Button mnemonicParsing="false">
+                              <graphic>
+                              <StackPane>
+                                 <children>
+                                    <Label text="0">
+                                       <StackPane.margin>
+                                          <Insets bottom="20.0" left="20.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="notification-button">
+                                            <image>
+                                                <Image url="@../icons/book-outline.png" />
+                                            </image>
+                                        </ImageView>
+                                 </children>
+                              </StackPane>
+                              </graphic>
+                              <styleClass>
+                                  <String fx:value="top-bar-buttons" />
+                                  <String fx:value="bg-white" />
+                              <String fx:value="no-border" />
+                              </styleClass>
+                          </Button>
+                     </children>
+                  </HBox>
+                    <MenuButton mnemonicParsing="false" text="Imran Khan">
+                        <items>
+                            <MenuItem mnemonicParsing="false" text="My Profile" />
+                            <MenuItem mnemonicParsing="false" text="Account Settings" />
+                        <MenuItem mnemonicParsing="false" text="Sign Out" />
+                        </items>
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../icons/account-circle-outline.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                        <styleClass>
+                            <String fx:value="top-bar-buttons" />
+                            <String fx:value="bg-white" />
+                        </styleClass>
+                    </MenuButton>
+                </children>
+            </HBox>
+        </children>
+    </HBox>
+</children>
+   <stylesheets>
+<!--      <URL value="@../styles/top-bar.css" />-->
+<!--      <URL value="@../styles/common.css" />-->
+   </stylesheets>
+   <styleClass>
+      <String fx:value="top-bar" />
+      <String fx:value="shadow" />
+   </styleClass>
+</HBox>

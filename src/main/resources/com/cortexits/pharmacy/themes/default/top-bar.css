@@ -1,0 +1,17 @@
+.top-bar {
+    -fx-background-color: #fff;
+}
+.top-bar-right {
+    -fx-background-color: #fff;
+}
+.search-field {
+    -fx-border-color: #696969;
+    -fx-background-color: #fff;
+    -fx-pref-width: 270px;
+    -fx-pref-height: 33px;
+}
+.top-bar-buttons {
+    -fx-background-color: #fff;
+    -fx-padding: 2px;
+
+}

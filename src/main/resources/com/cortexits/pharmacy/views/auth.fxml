@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.auth.AuthController">
+   <children>
+      <AnchorPane layoutY="1.0" styleClass="left-side" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="25.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="140.0">
+               <image>
+                  <Image url="@../images/authentication-1751982.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutX="248.0" styleClass="right-side" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="welcome-text" layoutX="91.0" layoutY="114.0" text="Welcome" />
+            <VBox alignment="CENTER_LEFT" layoutX="91.0" layoutY="170.0" prefHeight="188.0" prefWidth="266.0" spacing="10.0" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="170.0">
+               <children>
+                  <Label text="Username" />
+<!--                  <TextField styleClass="form-error" />-->
+                  <TextField />
+                  <Label text="Password" />
+                  <PasswordField styleClass="form-error" />
+                  <AnchorPane>
+                     <children>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#onCancelAction" styleClass="cancel" text="Close" />
+                        <Button layoutX="147.0" layoutY="2.0" mnemonicParsing="false" onAction="#onLoginAction" prefHeight="24.0" prefWidth="119.0" styleClass="login" text="Login" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../themes/default/auth.css" />
+      <URL value="@../themes/default/form.css" />
+   </stylesheets>
+</AnchorPane>

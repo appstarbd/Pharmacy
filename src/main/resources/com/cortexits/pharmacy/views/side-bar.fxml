@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ToggleButton?>
+
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="80.0" spacing="20.0" styleClass="side-bar" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.controllers.SidebarController">
+    <children>
+        <ToggleButton fx:id="dashboardButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#onDashboardAction" selected="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/view-dashboard.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <toggleGroup>
+            <ToggleGroup fx:id="sideMenuGroup" />
+         </toggleGroup>
+        </ToggleButton>
+      <VBox fx:id="sideButtonHolder" alignment="CENTER" spacing="20.0">
+<!--         <children>-->
+<!--              <Button mnemonicParsing="false">-->
+<!--                  <graphic>-->
+<!--                      <ImageView fitHeight="70.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                          <image>-->
+<!--                              <Image url="@../icons/point-of-sale.png" />-->
+<!--                          </image>-->
+<!--                      </ImageView>-->
+<!--                  </graphic>-->
+<!--              </Button>-->
+<!--              <Button mnemonicParsing="false">-->
+<!--                  <graphic>-->
+<!--                      <ImageView fitHeight="70.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                          <image>-->
+<!--                              <Image url="@../icons/pill.png" />-->
+<!--                          </image>-->
+<!--                      </ImageView>-->
+<!--                  </graphic>-->
+<!--              </Button>-->
+<!--              <Button mnemonicParsing="false">-->
+<!--                  <graphic>-->
+<!--                      <ImageView fitHeight="70.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                          <image>-->
+<!--                              <Image url="@../icons/scale-balance.png" />-->
+<!--                          </image>-->
+<!--                      </ImageView>-->
+<!--                  </graphic>-->
+<!--              </Button>-->
+<!--              <Button mnemonicParsing="false">-->
+<!--                  <graphic>-->
+<!--                      <ImageView fitHeight="70.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                          <image>-->
+<!--                              <Image url="@../icons/cog-outline.png" />-->
+<!--                          </image>-->
+<!--                      </ImageView>-->
+<!--                  </graphic>-->
+<!--              </Button>-->
+<!--         </children>-->
+      </VBox>
+      <Button fx:id="powerButton" mnemonicParsing="false" onAction="#onPowerAction">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/power.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+   <padding>
+      <Insets bottom="10.0" top="10.0" />
+   </padding></VBox>

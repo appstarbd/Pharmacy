@@ -1,0 +1,11 @@
+.form-success {}
+.form-success.bordered {}
+.form-warning {}
+.form-warning.bordered {}
+.form-danger {}
+.form-danger.bordered {}
+.form-error {}
+.form-error.bordered {
+    -fx-border-width: 2px;
+    -fx-border-color: #f00;
+}

@@ -1,0 +1,18 @@
+.bg {
+    /*-fx-background-color: #ff0;*/
+}
+.bg-white {
+    -fx-background-color: #fff;
+}
+.card {
+    /*-fx-border-color: #696969;*/
+    -fx-border-radius: 10px;
+    -fx-pref-width: 284;
+    -fx-pref-height: 140;
+}
+.card .label.title {
+    -fx-font-size: 30;
+}
+.card .label.body {
+    -fx-font-size: 20;
+}

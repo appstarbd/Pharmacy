@@ -1,0 +1,9 @@
+# Project exclude paths
+/Pharmacy.iml
+/.gradle/
+/.idea/
+/build/
+/build/classes/java/main/
+/medicine/.gradle/
+/medicine/build/
+/medicine/build/classes/java/main/
