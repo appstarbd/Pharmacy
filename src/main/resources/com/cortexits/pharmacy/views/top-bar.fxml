@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import java.lang.String?>
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.StackPane?>
 
-<HBox id="bottom" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.controllers.TopBarController">
+<HBox id="bottom" fx:id="topBar" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.controllers.TopBarController">
 <children>
     <Pane prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #00af67;">
         <HBox.margin>
@@ -41,7 +28,7 @@
                     <Insets left="20.0" />
                 </HBox.margin>
                 <children>
-                    <TextField prefHeight="33.0" promptText="Search anything ...">
+                    <TextField onMouseClicked="#onSearchAction" prefHeight="33.0" promptText="Search anything ...">
                         <styleClass>
                             <String fx:value="search-field" />
                             <String fx:value="rounded" />
@@ -65,20 +52,23 @@
                 <children>
                   <HBox alignment="CENTER">
                      <children>
-                          <Button fx:id="notificationButton" mnemonicParsing="false">
+                          <Button fx:id="notificationButton" mnemonicParsing="false" onMouseClicked="#onNotificationAction">
                               <graphic>
                               <StackPane>
                                  <children>
-                                    <Label text="0">
-                                       <StackPane.margin>
-                                          <Insets bottom="20.0" left="20.0" />
-                                       </StackPane.margin>
-                                    </Label>
                                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@../icons/bell-outline.png" />
                                             </image>
                                         </ImageView>
+                                    <Label fx:id="notificationCount" text="0" textFill="RED">
+                                       <StackPane.margin>
+                                          <Insets bottom="20.0" left="20.0" />
+                                       </StackPane.margin>
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </StackPane>
                               </graphic>
@@ -88,7 +78,7 @@
                               <String fx:value="no-border" />
                               </styleClass>
                           </Button>
-                          <Button mnemonicParsing="false">
+                          <Button fx:id="messageNotification" mnemonicParsing="false" onMouseClicked="#onMessageNotificationAction">
                               <graphic>
                               <StackPane>
                                  <children>
@@ -138,9 +128,30 @@
                   </HBox>
                     <MenuButton mnemonicParsing="false" text="Imran Khan">
                         <items>
-                            <MenuItem mnemonicParsing="false" text="My Profile" />
-                            <MenuItem mnemonicParsing="false" text="Account Settings" />
-                        <MenuItem mnemonicParsing="false" text="Sign Out" />
+                            <MenuItem mnemonicParsing="false" text="My Profile">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/account.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                            <MenuItem mnemonicParsing="false" text="Account Settings">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/cog-outline.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Sign Out">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
                         </items>
                         <graphic>
                             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">

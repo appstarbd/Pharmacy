@@ -7,6 +7,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Author     : imran
 */
 
+@import "form.css"; /* Using a string */
+
 root { 
     display: block;
 }
@@ -36,10 +38,13 @@ root {
 }
 
 #welcome-text {
-   -fx-font-size: 32px;
+   -fx-font-size: 48px;
    -fx-font-family: "Arial Black";
-   -fx-fill: #818181;
-   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+   /*-fx-fill: #818181;*/
+   /*-fx-fill: #00e091;*/
+   -fx-fill: #00ffa5;
+   /*-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );*/
+   -fx-effect: innershadow( three-pass-box , #006b19, 6, 0.0 , 0 , 2 );
 }
 #actiontarget {
   -fx-fill: FIREBRICK;

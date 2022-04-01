@@ -13,5 +13,7 @@
 .top-bar-buttons {
     -fx-background-color: #fff;
     -fx-padding: 2px;
-
+}
+.top-bar-buttons:hover {
+    -fx-background-color: transparent;
 }

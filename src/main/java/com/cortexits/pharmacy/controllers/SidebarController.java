@@ -1,18 +1,16 @@
 package com.cortexits.pharmacy.controllers;
 
+import com.cortexits.pharmacy.managers.AppManager;
 import com.cortexits.pharmacy.managers.ViewManager;
 import com.cortexits.pharmacy.utils.*;
-import javafx.application.Platform;
+import com.cortexits.pharmacy.views.SideButton;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class SidebarController extends BaseController {
@@ -38,10 +36,10 @@ public class SidebarController extends BaseController {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Tooltip dashboardTooltip = new Tooltip("Dashboard");
-        dashboardTooltip.setShowDelay(new Duration(0));
+        dashboardTooltip.setShowDelay(Duration.ZERO);
         dashboardButton.setTooltip(dashboardTooltip);
         Tooltip powerOffTooltip = new Tooltip("Exit");
-        powerOffTooltip.setShowDelay(new Duration(0));
+        powerOffTooltip.setShowDelay(Duration.ZERO);
         powerButton.setTooltip(powerOffTooltip);
 
 //        posButton = new SideButton(View.POS_SALE, Icon.POINT_OF_SALE, "POS Sale");
@@ -67,18 +65,11 @@ public class SidebarController extends BaseController {
 
     @FXML
     protected void onPowerAction() {
-        Alert powerOffAlert = new Alert(Alert.AlertType.WARNING,"Do you really want to close this application?", ButtonType.YES, ButtonType.NO);
-        powerOffAlert.initModality(Modality.APPLICATION_MODAL);
-        powerOffAlert.initStyle(StageStyle.UNDECORATED);
-        powerOffAlert.initOwner(ViewManager.getStage());
-        powerOffAlert.showAndWait()
-                .filter(response -> response == ButtonType.YES)
-                .ifPresent(response -> Platform.exit());
-
+        AppManager.shutdown();
 
 //        com.cortexits.pharmacy.helpers.MyHelper.printFiles("views", "fxml");
 //        com.cortexits.pharmacy.helpers.MyHelper.printFxmlFiles(null);
 //        com.cortexits.pharmacy.helpers.MyHelper.printFxmlFiles("management");
-        com.cortexits.pharmacy.helpers.MyHelper.printIconFiles();
+//        com.cortexits.pharmacy.helpers.MyHelper.printIconFiles();
     }
 }

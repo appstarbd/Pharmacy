@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../themes/default/splash.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.controllers.SplashController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/splash.png" />
+         </image>
+      </ImageView>
+      <AnchorPane>
+         <children>
+            <Text fx:id="brandText" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="brand-name" text="PharmaBiller" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="204.0" AnchorPane.topAnchor="312.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Label fx:id="progressText" styleClass="loading-text" text="Loading..." AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="0.0" />
+            <ProgressBar fx:id="progressBar" style="-fx-max-height: 2;" styleClass="loading-progress" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

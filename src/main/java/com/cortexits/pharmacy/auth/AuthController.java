@@ -37,12 +37,6 @@ public class AuthController extends BaseController {
 
     @FXML
     public void onLoginAction(ActionEvent e) throws IOException {
-//        MainApplication mainApplication = new MainApplication();
-
-//        Scene scene = ((Scene) e.getSource()).getWindow().getScene();
-//        scene.getWindow().hide();
-//        Window window = ((Window) e.getSource()).getScene().getWindow();
-//        mainApplication.start(new Stage());
         String username = userName.getText();
         String password = userPass.getText();
         AppManager.setAuth(Objects.equals(username, password));

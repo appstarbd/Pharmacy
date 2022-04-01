@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import java.net.*?>
 <?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <!--<?import org.kordamp.ikonli.javafx.StackedFontIcon?>-->
 <!--<?import org.kordamp.ikonli.javafx.FontIcon?>-->
 
 <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.controllers.MainController">
    <children>
-      <MenuBar fx:id="menuBar">
-<!--        <menus>-->
-<!--          <Menu mnemonicParsing="false" text="Help">-->
-<!--            <items>-->
-<!--              <MenuItem mnemonicParsing="false" text="About" />-->
-<!--            </items>-->
-<!--          </Menu>-->
-<!--        </menus>-->
-      </MenuBar>
+<!--      <MenuBar fx:id="menuBar">-->
+<!--&lt;!&ndash;        <menus>&ndash;&gt;-->
+<!--&lt;!&ndash;          <Menu mnemonicParsing="false" text="Help">&ndash;&gt;-->
+<!--&lt;!&ndash;            <items>&ndash;&gt;-->
+<!--&lt;!&ndash;              <MenuItem mnemonicParsing="false" text="About" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </items>&ndash;&gt;-->
+<!--&lt;!&ndash;          </Menu>&ndash;&gt;-->
+<!--&lt;!&ndash;        </menus>&ndash;&gt;-->
+<!--      </MenuBar>-->
+      <fx:include source="menu-bar.fxml" />
       <BorderPane styleClass="root-container" VBox.vgrow="ALWAYS">
          <left>
             <fx:include source="side-bar.fxml" />
@@ -44,7 +30,9 @@
          <center>
             <BorderPane>
                <center>
-                  <ScrollPane fx:id="contentPane" fitToHeight="true" fitToWidth="true" pannable="true" />
+<!--                  <ScrollPane fx:id="contentPane" fitToHeight="true" fitToWidth="true" pannable="true" style="-fx-background-color: red;" />-->
+                  <AnchorPane fx:id="contentPane" />
+<!--                  <StackPane fx:id="contentPane" />-->
                </center>
                <top>
                   <HBox alignment="CENTER_LEFT" minHeight="40.0" prefHeight="40.0" styleClass="title-panel" BorderPane.alignment="CENTER">
@@ -63,11 +51,12 @@
             </BorderPane>
          </center>
       </BorderPane>
-      <ToolBar minHeight="-Infinity" minWidth="200.0" prefHeight="40.0" prefWidth="200.0">
-         <items>
-            <Hyperlink text="Developed by ArraySoft" />
-         </items>
-      </ToolBar>
+<!--      <ToolBar minHeight="-Infinity" minWidth="200.0" prefHeight="40.0" prefWidth="200.0">-->
+<!--         <items>-->
+<!--            <Hyperlink text="Developed by ArraySoft" />-->
+<!--         </items>-->
+<!--      </ToolBar>-->
+      <fx:include source="tool-bar.fxml" />
    </children>
    <stylesheets>
       <URL value="@../themes/default/main.css" />

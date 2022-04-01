@@ -6,6 +6,9 @@ package com.cortexits.pharmacy.controllers;
 
 import javafx.fxml.Initializable;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 /**
  *
  * @author imran
@@ -17,16 +20,7 @@ public abstract class BaseController implements Initializable {
 ////    private AnchorPane contentPane;
 //    private ScrollPane contentPane;
 //
-//    @Override
-//    public void initialize(URL location, ResourceBundle resources) {
-//        StageManager.setTitleText(titleText);
-//        StageManager.setContainer(contentPane);
-//        try {
-////            StageManager.setContentPane("Dashboard", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("views/dashboard.fxml"))));
-//            StageManager.setView("Dashboard", Views.DASHBOARD);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {}
     
 }

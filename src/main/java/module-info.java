@@ -12,6 +12,8 @@ module com.cortexits.pharmacy {
 //    requires org.kordamp.bootstrapfx.core;
 //    requires eu.hansolo.tilesfx;
 
+//    requires java.desktop;
+
 //    requires com.cortexits.pharmacy.medicine;
 
     opens com.cortexits.pharmacy to javafx.fxml;
@@ -44,6 +46,7 @@ module com.cortexits.pharmacy {
     exports com.cortexits.pharmacy.manufacturer;
 
     exports com.cortexits.pharmacy.utils;
+    exports com.cortexits.pharmacy.views;
 
 //    exports com.cortexits.pharmacy.sample;
 //    opens com.cortexits.pharmacy.sample to javafx.fxml;

@@ -162,7 +162,7 @@
                </children>
             </GridPane>
             <Button layoutX="2.0" layoutY="483.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="396.0" styleClass="pay-now" text="Pay Now" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" />
-            <Button layoutX="2.0" layoutY="546.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="190.0" styleClass="new" text="New" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" HBox.hgrow="ALWAYS" />
+            <Button layoutX="2.0" layoutY="546.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="190.0" styleClass="new-order" text="New" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" HBox.hgrow="ALWAYS" />
             <Button layoutX="338.0" layoutY="546.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="190.0" styleClass="cancel" text="Cancel" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" GridPane.columnIndex="1" HBox.hgrow="ALWAYS" />
          </children>
       </AnchorPane>

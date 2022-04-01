@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.chart.*?>
 <?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.dashboard.DashboardController">
-   <children>
-      <VBox layoutX="20.0" layoutY="20.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+<ScrollPane fitToWidth="true" prefViewportHeight="484.0" prefViewportWidth="1196.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.dashboard.DashboardController">
+   <content>
+      <VBox layoutX="20.0" layoutY="20.0" spacing="20.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
             <GridPane hgap="20.0">
                <columnConstraints>
@@ -26,7 +24,7 @@
                <children>
                   <AnchorPane layoutX="14.0" layoutY="35.0">
                      <children>
-                        <GridPane layoutX="14.0" layoutY="20.0">
+                        <GridPane layoutX="14.0" layoutY="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                            </columnConstraints>
@@ -35,8 +33,8 @@
                               <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label layoutX="14.0" layoutY="76.0" styleClass="body" text="Label" AnchorPane.topAnchor="60.0" GridPane.rowIndex="1" />
-                              <Label layoutX="14.0" layoutY="35.0" styleClass="title" text="Label" AnchorPane.topAnchor="20.0" />
+                              <Label layoutX="14.0" layoutY="76.0" styleClass="body" text="Total Medicine" AnchorPane.topAnchor="60.0" GridPane.rowIndex="1" />
+                              <Label layoutX="14.0" layoutY="35.0" styleClass="title" text="\$0.00" AnchorPane.topAnchor="20.0" />
                            </children>
                         </GridPane>
                      </children>
@@ -47,8 +45,19 @@
                   </AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="10.0" GridPane.columnIndex="1">
                      <children>
-                        <Label layoutX="14.0" layoutY="35.0" styleClass="title" text="Label" AnchorPane.topAnchor="20.0" />
-                        <Label layoutX="14.0" layoutY="76.0" styleClass="body" text="Label" AnchorPane.topAnchor="70.0" />
+                        <GridPane layoutX="14.0" layoutY="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label layoutX="14.0" layoutY="76.0" styleClass="body" text="Total Stock" AnchorPane.topAnchor="60.0" GridPane.rowIndex="1" />
+                              <Label layoutX="14.0" layoutY="35.0" styleClass="title" text="\$0.00" AnchorPane.topAnchor="20.0" />
+                           </children>
+                        </GridPane>
                      </children>
                      <styleClass>
                         <String fx:value="card" />
@@ -57,8 +66,19 @@
                   </AnchorPane>
                   <AnchorPane layoutX="451.0" layoutY="10.0" GridPane.columnIndex="2">
                      <children>
-                        <Label layoutX="14.0" layoutY="35.0" styleClass="title" text="Label" AnchorPane.topAnchor="20.0" />
-                        <Label layoutX="14.0" layoutY="76.0" styleClass="body" text="Label" AnchorPane.topAnchor="70.0" />
+                        <GridPane layoutX="14.0" layoutY="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label layoutX="14.0" layoutY="76.0" styleClass="body" text="Total Sale" AnchorPane.topAnchor="60.0" GridPane.rowIndex="1" />
+                              <Label layoutX="14.0" layoutY="35.0" styleClass="title" text="\$0.00" AnchorPane.topAnchor="20.0" />
+                           </children>
+                        </GridPane>
                      </children>
                      <styleClass>
                         <String fx:value="card" />
@@ -67,8 +87,19 @@
                   </AnchorPane>
                   <AnchorPane layoutX="756.0" layoutY="10.0" GridPane.columnIndex="3">
                      <children>
-                        <Label layoutX="14.0" layoutY="35.0" styleClass="title" text="Label" AnchorPane.topAnchor="20.0" />
-                        <Label layoutX="14.0" layoutY="76.0" styleClass="body" text="Label" AnchorPane.topAnchor="70.0" />
+                        <GridPane layoutX="14.0" layoutY="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label layoutX="14.0" layoutY="76.0" styleClass="body" text="Total Due" AnchorPane.topAnchor="60.0" GridPane.rowIndex="1" />
+                              <Label layoutX="14.0" layoutY="35.0" styleClass="title" text="\$0.00" AnchorPane.topAnchor="20.0" />
+                           </children>
+                        </GridPane>
                      </children>
                      <styleClass>
                         <String fx:value="card" />
@@ -99,8 +130,8 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label text="POS / Bill" />
-                              <Label text="In Last 12 Months" GridPane.rowIndex="1" />
+                              <Label text="Income" />
+                              <Label text="This Month" GridPane.rowIndex="1" />
                               <Label text="\$0.00" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowSpan="2">
                                  <font>
                                     <Font size="30.0" />
@@ -110,8 +141,8 @@
                         </GridPane>
                         <GridPane layoutX="10.0" layoutY="10.0">
                            <children>
-                              <Label text="POS / Bill" />
-                              <Label text="In Last 30 Days" GridPane.rowIndex="1" />
+                              <Label text="Purchase" />
+                              <Label text="This Month" GridPane.rowIndex="1" />
                               <Label text="\$0.00" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowSpan="2">
                                  <font>
                                     <Font size="30.0" />
@@ -129,8 +160,8 @@
                         </GridPane>
                         <GridPane layoutX="10.0" layoutY="90.0">
                            <children>
-                              <Label text="Invoice" />
-                              <Label text="In Last 12 Months" GridPane.rowIndex="1" />
+                              <Label text="Expense" />
+                              <Label text="This Month" GridPane.rowIndex="1" />
                               <Label text="\$0.00" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowSpan="2">
                                  <font>
                                     <Font size="30.0" />
@@ -148,8 +179,8 @@
                         </GridPane>
                         <GridPane layoutX="10.0" layoutY="124.0">
                            <children>
-                              <Label text="Invoice" />
-                              <Label text="In Last 12 Months" GridPane.rowIndex="1" />
+                              <Label text="Salary Expense" />
+                              <Label text="This Month" GridPane.rowIndex="1" />
                               <Label text="\$0.00" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowSpan="2">
                                  <font>
                                     <Font size="30.0" />
@@ -172,7 +203,45 @@
                   </VBox>
                </children>
             </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <TitledPane collapsible="false" text="Low Stock List" HBox.hgrow="ALWAYS">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane collapsible="false" text="Expiring List" HBox.hgrow="ALWAYS">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </HBox>
          </children>
       </VBox>
-   </children>
-</AnchorPane>
+   </content>
+</ScrollPane>

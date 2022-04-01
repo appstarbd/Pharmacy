@@ -6,15 +6,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="542.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.stock.StockController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.stock.StockController">
     <children>
-        <HBox layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-            <children>
-                <TextField prefHeight="33.0" HBox.hgrow="ALWAYS" />
-                <Button mnemonicParsing="false" prefHeight="33.0" text="Button" />
-            </children>
-        </HBox>
-        <TableView layoutX="10.0" layoutY="56.0" prefHeight="476.0" prefWidth="839.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="56.0">
+        <fx:include source="../search-bar.fxml" />
+        <TableView layoutX="10.0" layoutY="56.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="45.0">
             <columns>
                 <TableColumn prefWidth="75.0" text="Medicine Name" />
                 <TableColumn prefWidth="75.0" text="Manufacturer Name" />

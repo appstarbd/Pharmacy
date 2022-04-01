@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Arrays;
 
 public class MyHelper {
 
@@ -82,7 +83,7 @@ public class MyHelper {
             File[] files = file.listFiles();
             System.out.println(files);
 //        assert files != null;
-//        Arrays.sort(files);
+        Arrays.sort(files);
 //        assert files != null;
 //        List<File> l = Arrays.stream(files).sorted(File::getName).collect(Collectors.toList());
             System.out.println("-------------------------------------------");
@@ -146,7 +147,7 @@ public class MyHelper {
             File[] files = file.listFiles();
             System.out.println(files);
 //        assert files != null;
-//        Arrays.sort(files);
+        Arrays.sort(files);
 //        assert files != null;
 //        List<File> l = Arrays.stream(files).sorted(File::getName).collect(Collectors.toList());
             System.out.println("-------------------------------------------");

@@ -1,8 +1,13 @@
-.scroll-pane {}
+.scroll-pane,
+.scroll-pane .viewport {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
 
 .scroll-pane .scroll-bar {
-    -fx-pref-width: 20;
-    -fx-pref-height: 20;
+    /*-fx-pref-width: 20;*/
+    /*-fx-pref-height: 20;*/
     /*-fx-background-color: #f00;*/
 }
 
@@ -12,7 +17,7 @@
     /*-fx-background-color: #0f0;*/
     /*-fx-background-color: #00a124;*/
     /*-fx-background-color: linear-gradient(to bottom right, #00ce86, #00b429);*/
-    -fx-background-color: linear-gradient(to bottom right, #00e091, #00a124);
+    /*-fx-background-color: linear-gradient(to bottom right, #00e091, #00a124);*/
 }
 
 .scroll-pane .scroll-bar .track {
@@ -95,6 +100,13 @@
     /*-fx-font-weight: bold;*/
     -fx-background-color: #fff;
     -fx-border-color: #c8c8c8;
+    -fx-cursor: "hand";
+}
+
+.button/*:not(.top-bar-buttons)*/:hover {
+    /*-fx-effect: linear-gradient(to bottom right, #00ce86, #00b429);*/
+    -fx-background-color: linear-gradient(to bottom right, #00ce86, #00b429);
+    -fx-text-fill: #fff;
 }
 
 .button:pressed {
@@ -128,20 +140,56 @@
     -fx-border-color: #00b429;
     -fx-text-fill: #fff;
     -fx-font-weight: bold;
+    -fx-border-width: 0 0 3 0;
+}
+
+.button.new-order {
+    -fx-background-color: #ffd000;
+    /*-fx-background-color: #00dc80;*/
+    -fx-border-color: #e1b900;
+    /*-fx-border-color: #00b429;*/
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+    -fx-border-width: 0 0 3 0;
 }
 
 .button.new {
+    /*-fx-background-color: #ffd000;*/
+    -fx-background-color: #0080ff;
+    /*-fx-border-color: #e1b900;*/
+    -fx-border-color: #005FDCFF;
+    -fx-text-fill: #fff;
+    /*-fx-font-weight: bold;*/
+    -fx-border-width: 0 0 3 0;
+}
+
+.button.save {
+    /*-fx-background-color: #ffd000;*/
+    -fx-background-color: #00dc80;
+    /*-fx-border-color: #e1b900;*/
+    -fx-border-color: #00b429;
+    -fx-text-fill: #fff;
+    /*-fx-font-weight: bold;*/
+    -fx-border-width: 0 0 3 0;
+}
+
+.button.edit {
     -fx-background-color: #ffd000;
     -fx-border-color: #e1b900;
     -fx-text-fill: #fff;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
+    -fx-border-width: 0 0 3 0;
 }
 
-.button.cancel {
+.button.cancel,
+.button.delete,
+.button.remove,
+.button.danger {
     -fx-background-color: #ff6666;
     -fx-border-color: #de4e4e;
     -fx-text-fill: #fff;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
+    -fx-border-width: 0 0 3 0;
 }
 
 .toggle-button {
@@ -154,6 +202,15 @@
     -fx-background-color: #fff;
     /*-fx-border-color: #00ce86;*/
     -fx-border-color: #00b429;
+    -fx-cursor: "hand";
+}
+
+.radio-button .radio {
+    /*-fx-background-color: #00b429;*/
+}
+
+.radio-button:selected .radio .dot {
+    /*-fx-background-color: #00dc80;*/
 }
 
 .toggle-button:selected {
@@ -173,7 +230,7 @@
     -fx-min-height: 33;
     -fx-fill: #00b429;
     -fx-text-fill: #00b429;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
     -fx-highlight-fill: #f00;
     -fx-border-color: #d8d8d8;
 }
@@ -196,6 +253,7 @@
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
     -fx-padding: 0;
+    -fx-text-fill: #ff3c00;
 
     /*-fx-control-inner-background: #EEEEEE;*/
     /*-fx-background-insets: 0;*/
@@ -209,6 +267,16 @@
     -fx-text-fill: #f00;
 }
 
+.text-area {
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.text-area:focused {
+    /*-fx-background-color: transparent;*/
+    -fx-border-color: linear-gradient(to bottom right, #00ce86, #00b429);
+}
+
 .combo-box {
     -fx-background-color: #fff;
     -fx-background-radius: 0;
@@ -220,24 +288,49 @@
     -fx-min-height: 33;
     -fx-fill: #00b429;
     -fx-text-fill: #00b429;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
 }
 .combo-box .arrow-button {
     -fx-background-radius: 0;
     -fx-border-radius: 0;
-    -fx-background-color: #00ce86;
+    /*-fx-background-color: #00ce86;*/
 }
 
 .date-picker {
+    -fx-background-color: #fff;
     -fx-background-radius: 0;
+    -fx-border-color: #d8d8d8;
     -fx-border-radius: 0;
     /*-fx-pref-width: 33;*/
     -fx-pref-height: 33;
     /*-fx-min-width: 33;*/
-    -fx-min-height: 33;
+    /*-fx-min-height: 33;*/
     -fx-fill: #00b429;
     -fx-text-fill: #00b429;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
+}
+
+.date-picker .date-picker-display-node {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.date-picker .button {
+    /*-fx-background-color: #fff;*/
+    /*-fx-background-radius: 0;*/
+    /*-fx-border-radius: 0;*/
+    /*-fx-background-color: #00ce86;*/
+}
+
+.date-picker .button:hover {
+    -fx-background-color: #00ce86;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #fff;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    /*-fx-background-color: #00ce86;*/
 }
 
 .table-view {

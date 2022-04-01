@@ -1,7 +1,9 @@
-package com.cortexits.pharmacy.utils;
+package com.cortexits.pharmacy.views;
 
 import com.cortexits.pharmacy.MainApplication;
 import com.cortexits.pharmacy.managers.ViewManager;
+import com.cortexits.pharmacy.utils.Icon;
+import com.cortexits.pharmacy.utils.View;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
@@ -51,7 +53,7 @@ public class SideButton extends ToggleButton {
         this.title = title;
         setImageIcon(icon);
         Tooltip tooltip = new Tooltip(title);
-        tooltip.setShowDelay(new Duration(0));
+        tooltip.setShowDelay(Duration.ZERO);
         setTooltip(tooltip);
 
         this.view = view;

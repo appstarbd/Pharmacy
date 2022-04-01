@@ -1,27 +1,27 @@
 package com.cortexits.pharmacy;
 
 import com.cortexits.pharmacy.managers.AppManager;
-import com.cortexits.pharmacy.managers.ViewManager;
 import javafx.application.Application;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class MainApplication extends Application {
+
+    @Override
+    public void init() throws Exception {
+        super.init();
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("views/main.fxml"));
-////        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-//        Scene scene = new Scene(fxmlLoader.load());
-////        scene.getStylesheets().add("com/cortexits/pharmacy/styles/main.css");
-////        scene.getStylesheets().add(getClass().getResource("auth.css").toExternalForm());
-//        primaryStage.setTitle("Pharmacy Management System");
-//        primaryStage.setScene(scene);
-//        primaryStage.show();
-        if (AppManager.initApplication()) {
-            AppManager.startApplication(primaryStage);
+        if (AppManager.initApplication(primaryStage)) {
+            System.out.println("init::start");
+//            AppManager.startApplication(primaryStage);
         } else {
-            throw new Exception();
+            System.err.println("Failed to start the application");
+//            throw new Exception();
         }
 
     }

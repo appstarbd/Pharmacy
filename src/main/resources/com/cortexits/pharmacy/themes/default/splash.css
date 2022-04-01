@@ -1,0 +1,45 @@
+/*
+    Created on : Apr 01, 2022, 10:03:26 AM
+    Author     : imran
+*/
+
+root { 
+    display: block;
+}
+/*.root {
+-fx-background-image: url("background.jpg");
+}*/
+
+.brand-name {}
+
+.label.loading-text {
+    -fx-font-size: 12;
+    /*-fx-padding: 5;*/
+    /*-fx-text-fill: #00ce86;*/
+    -fx-text-fill: #575757;
+}
+
+.loading-progress/*,
+.loading-progress .track*/ {
+    -fx-pref-height: 10;
+    -fx-min-height: 10;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    /*-fx-background-color: transparent;*/
+    /*-fx-border-color: transparent;*/
+}
+
+.loading-progress .track {
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.loading-progress .bar {
+    -fx-background-color: #00ce86;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+/*.progress-indicator*/
