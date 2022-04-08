@@ -2,9 +2,6 @@ package com.cortexits.pharmacy;
 
 import com.cortexits.pharmacy.managers.AppManager;
 import javafx.application.Application;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class MainApplication extends Application {

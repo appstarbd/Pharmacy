@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.cortexits.pharmacy.model">
+	<class lazy="false" name="UserPermission" table="user_permissions">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+<!--		<id name="name" length="40" type="java.lang.String">-->
+<!--			<generator class="assigned" />-->
+<!--		</id>-->
+		<version name="version" type="long" />
+		<property name="createdAt" type="java.util.Date" />
+		<property name="updatedAt" type="java.util.Date" />
+		<property name="deletedAt" type="java.util.Date" />
+		<property name="lastUpdateAt" type="java.util.Date" />
+		<property name="lastSyncAt" type="java.util.Date" />
+		<property name="cloudSynced" type="java.lang.Boolean" />
+		<property name="hasSyncError" type="java.lang.Boolean" />
+<!--		<one-to-one name="userType" class="com.cortexits.pharmacy.model.UserType">-->
+<!--&lt;!&ndash;			<column name="id" not-null="true" />&ndash;&gt;-->
+<!--		</one-to-one>-->
+	</class>
+</hibernate-mapping>

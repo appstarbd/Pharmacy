@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.auth.AuthController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortexits.pharmacy.auth.AuthController">
    <children>
       <AnchorPane layoutY="1.0" styleClass="left-side" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -26,9 +27,9 @@
                <children>
                   <Label text="Username" />
 <!--                  <TextField styleClass="form-error" />-->
-                  <TextField fx:id="userName" />
+                  <TextField fx:id="userName" promptText="Username / Phone / Email" />
                   <Label text="Password" />
-                  <PasswordField fx:id="userPass" styleClass="form-error" />
+                  <PasswordField fx:id="userPass" onAction="#onLoginAction" promptText="Password" styleClass="form-error" />
                   <AnchorPane>
                      <children>
                         <Button cancelButton="true" mnemonicParsing="false" onAction="#onCancelAction" styleClass="cancel" text="Close" />

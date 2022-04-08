@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" package="com.cortexits.pharmacy.model">
+	<class lazy="false" name="Store" table="stores">
+		<id name="id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<version name="version" type="long" />
+		<property name="createdAt" type="java.util.Date" />
+		<property name="updatedAt" type="java.util.Date" />
+		<property name="deletedAt" type="java.util.Date" />
+		<property name="lastUpdateAt" type="java.util.Date" />
+		<property name="lastSyncAt" type="java.util.Date" />
+		<property name="cloudSynced" type="java.lang.Boolean" />
+		<property name="hasSyncError" type="java.lang.Boolean" />
+
+		<property name="lastLoginTime" type="java.util.Date" />
+		<property name="uuid" unique="true" length="128" type="string" />
+		<property name="friendlyUid" unique="true" length="128" index="store_friendly_uid" type="string" />
+		<property name="resellerId" length="128" type="string" />
+		<property name="ownerId" length="128" type="string" />
+		<property name="defaultOutletId" length="128" type="string" />
+		<property name="name" unique="true" length="120" type="string" />
+		<property name="outletName" unique="true" length="120" type="string" />
+
+		<property name="addressLine1" length="160" type="string" />
+		<property name="addressLine2" length="160" type="string" />
+		<property name="addressLine3" length="160" type="string" />
+		<property name="house" type="java.lang.String" />
+		<property name="flatNo" length="20" type="java.lang.String" />
+		<property name="type" length="60" type="java.lang.String" />
+		<property name="street" type="java.lang.String" />
+		<property name="city" type="java.lang.String" />
+		<property name="state" type="java.lang.String" />
+		<property name="country" type="java.lang.String" />
+		<property name="countryCode" type="java.lang.String" />
+		<property name="zipCode" type="java.lang.String" />
+		<property name="telephone" length="128" type="string" />
+<!--		<property name="tables" type="java.lang.Integer" />-->
+		<property name="currencyName" length="20" type="string" />
+		<property name="currencySymbol" length="10" type="string" />
+		<property name="serviceChargePercentage" length="10" type="java.lang.Double" />
+		<property name="defaultGratuityPercentage" length="10" type="java.lang.Double" />
+		<property name="ticketFooterMessage" length="60" type="java.lang.String" />
+		<property name="itemPriceIncludesTax" type="java.lang.Boolean" />
+		<property name="allowModifierMaxExceed" type="java.lang.Boolean" />
+		<property name="useDetailedReconciliation" type="java.lang.Boolean" />
+
+		<property name="enableOnlineOrdering" type="java.lang.Boolean" />
+		
+<!--		<map name="properties" cascade="all" lazy="false" table="STORE_PROPERTIES">-->
+<!--			<key column="id" />-->
+<!--			<index column="property_name" type="java.lang.String" length="128" />-->
+<!--			<element column="property_value" type="java.lang.String" length="255" />-->
+<!--		</map>-->
+
+		<!-- Address -->
+<!--		<many-to-one cascade="save-update" class="com.cortexits.pharmacy.model.Address" lazy="false" name="address">-->
+<!--			<column name="ADDRESS" />-->
+<!--		</many-to-one>-->
+
+	</class>
+</hibernate-mapping>

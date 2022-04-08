@@ -22,5 +22,16 @@ public abstract class BaseController implements Initializable {
 //
     @Override
     public void initialize(URL location, ResourceBundle resources) {}
+
+    public void find() {
+        System.out.println(getClass().getName());
+    }
+    public void findAll() {}
+    public void get() {}
+    public void getAll() {}
+    public void save() {}
+    public void update() {}
+    public void saveOrUpdate() {}
+    public void destroy() {}
     
 }

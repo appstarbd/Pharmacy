@@ -1,6 +1,9 @@
 package com.cortexits.pharmacy.controllers;
 
+import com.cortexits.pharmacy.managers.AppManager;
+import com.cortexits.pharmacy.managers.AuthManager;
 import com.cortexits.pharmacy.managers.ViewManager;
+import com.cortexits.pharmacy.views.AlertView;
 import com.cortexits.pharmacy.views.NotificationView;
 import com.cortexits.pharmacy.views.popover.PopOver;
 import javafx.collections.FXCollections;
@@ -15,6 +18,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -27,6 +31,8 @@ public class TopBarController extends BaseController {
     @FXML
     private HBox topBar;
     @FXML
+    private MenuButton menuButton;
+    @FXML
     private Button notificationButton;
     @FXML
     private Label notificationCount;
@@ -37,6 +43,7 @@ public class TopBarController extends BaseController {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        menuButton.setText(AuthManager.getInstance().getFullName());
         notificationView = new NotificationView();
         notificationCount.setText(notificationView.getCountString());
     }
@@ -65,6 +72,19 @@ public class TopBarController extends BaseController {
 
     @FXML
     private void onMessageNotificationAction(MouseEvent event) {
+    }
+
+    @FXML
+    private void onSignOutAction() {
+        AlertView alertView = AlertView.showConfirmation("Do you want sign out the system");
+//        alertView.setButtons(ButtonType.YES, ButtonType.NO);
+        if (alertView.isPositive()) {
+            try {
+                AppManager.doLogout();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

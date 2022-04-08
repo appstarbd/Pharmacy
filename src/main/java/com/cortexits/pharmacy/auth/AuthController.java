@@ -6,8 +6,11 @@ package com.cortexits.pharmacy.auth;
 
 import com.cortexits.pharmacy.controllers.BaseController;
 import com.cortexits.pharmacy.MainApplication;
+import com.cortexits.pharmacy.customer.Customer;
 import com.cortexits.pharmacy.managers.AppManager;
 import com.cortexits.pharmacy.managers.ViewManager;
+import com.cortexits.pharmacy.model.BaseModel;
+import com.cortexits.pharmacy.model.User;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,8 +42,24 @@ public class AuthController extends BaseController {
     public void onLoginAction(ActionEvent e) throws IOException {
         String username = userName.getText();
         String password = userPass.getText();
-        AppManager.setAuth(Objects.equals(username, password));
-        AppManager.doLogin();
+//        AppManager.setAuth(Objects.equals(username, password));
+        AppManager.doLogin(username, password);
+
+//        Customer customer = new Customer();
+//        customer.find();
+//        find();
+//        User user = new User();
+//        user.setFirstName("Imran");
+//        user.setLastName("Khan");
+//        user.setPhoneNo("01852362788");
+//        user.setEmail("imrankhan.cse24@gmail.com");
+//        user.setPassword("123456");
+//        user.save();
+
+//        User user = new User();
+//        System.out.println(user.getAll());
+//        System.out.println(User.getInstance().find(1));
+//        System.out.println(User.getInstance().checkUser(username, password));
     }
 
     @FXML

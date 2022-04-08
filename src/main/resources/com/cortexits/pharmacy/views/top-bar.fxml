@@ -126,7 +126,7 @@
                           </Button>
                      </children>
                   </HBox>
-                    <MenuButton mnemonicParsing="false" text="Imran Khan">
+                    <MenuButton fx:id="menuButton" mnemonicParsing="false" text="Imran Khan">
                         <items>
                             <MenuItem mnemonicParsing="false" text="My Profile">
                            <graphic>
@@ -144,7 +144,7 @@
                                  </image>
                               </ImageView>
                            </graphic></MenuItem>
-                        <MenuItem mnemonicParsing="false" text="Sign Out">
+                        <MenuItem mnemonicParsing="false" onAction="#onSignOutAction" text="Sign Out">
                            <graphic>
                               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

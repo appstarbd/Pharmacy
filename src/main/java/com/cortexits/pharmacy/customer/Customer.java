@@ -1,4 +1,6 @@
 package com.cortexits.pharmacy.customer;
 
-public class Customer {
+import com.cortexits.pharmacy.model.BaseModel;
+
+public class Customer extends BaseModel {
 }

@@ -13,6 +13,31 @@ module com.cortexits.pharmacy {
 //    requires eu.hansolo.tilesfx;
 
 //    requires java.desktop;
+    requires org.hibernate.orm.core;
+//    requires org.hibernate.commons.annotations;
+//    requires org.hibernate.orm.spatial;
+//    requires org.hibernate.orm.vibur;
+//    requires org.hibernate.orm.envers;
+//    requires org.hibernate.orm.jcache;
+    requires org.hibernate.orm.c3p0;
+//    requires org.hibernate.orm.agroal;
+//    requires org.hibernate.orm.ehcache;
+//    requires javax.persistence;
+    requires java.persistence;
+//    requires jakarta.activation;
+//    requires jakarta.persistence;
+    requires java.naming;
+    requires com.fasterxml.classmate;
+    requires net.bytebuddy;
+    requires com.sun.xml.bind;
+    requires java.xml.bind;
+//    requires com.sun.xml.bind.core;
+//    requires java.xml.bind;
+    requires java.sql;
+    requires org.apache.commons.codec;
+//    requires commons.logging;
+    requires java.logging;
+//    requires mysql.connector.java;
 
 //    requires com.cortexits.pharmacy.medicine;
 
@@ -47,6 +72,10 @@ module com.cortexits.pharmacy {
 
     exports com.cortexits.pharmacy.utils;
     exports com.cortexits.pharmacy.views;
+    exports com.cortexits.pharmacy.model;
+    exports com.cortexits.pharmacy.exceptions;
+    exports com.cortexits.pharmacy.sample;
+    opens com.cortexits.pharmacy.sample to javafx.fxml;
 
 //    exports com.cortexits.pharmacy.sample;
 //    opens com.cortexits.pharmacy.sample to javafx.fxml;

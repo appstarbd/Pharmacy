@@ -234,6 +234,10 @@ public class ViewManager extends BaseManager {
         showView(view, stageStyle, false);
     }
 
+    public static void showView(View view, boolean alwaysOnTop) throws IOException {
+        showView(view, StageStyle.DECORATED, alwaysOnTop);
+    }
+
     public static void showView(View view, StageStyle stageStyle, boolean alwaysOnTop) throws IOException {
         if (stage.isShowing()) {
             stage.hide();
